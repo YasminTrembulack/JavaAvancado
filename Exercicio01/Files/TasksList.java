@@ -16,7 +16,7 @@ import java.awt.event.ActionListener;
 public class TasksList extends JFrame{
     private ArrayList<String> tasks = new ArrayList<>();
 
-    public TasksList(JFrame frame){
+    public TasksList(JFrame frame, JPanel pnAllTasks){
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JLabel lbAddTasks = new JLabel();
@@ -30,8 +30,17 @@ public class TasksList extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e){
                 tasks.add(tfAddTask.getText());
-                JOptionPane.showMessageDialog(null,"Tarefa adicionada com sucesso!");
                 self.setVisible(false);
+                JOptionPane.showMessageDialog(null,"Tarefa adicionada com sucesso!");
+                
+                JLabel lbTasks = new JLabel();
+
+                lbTasks = new JLabel();
+                lbTasks.setText(tasks.size()+".  "+ tasks.get(tasks.size()-1));
+                pnAllTasks.add(lbTasks);
+                
+                frame.pack();
+                frame.setLocationRelativeTo(null);
                 frame.setVisible(true);
             }
         });
@@ -60,11 +69,4 @@ public class TasksList extends JFrame{
         this.pack();
     }
 
-    public String getTasks(int index){
-        return tasks.get(index);
-    }
-
-    public int getSizeTask() {
-        return tasks.size();
-    }
 }
