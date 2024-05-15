@@ -11,8 +11,6 @@ import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
-
 public class TasksList extends JFrame{
     private ArrayList<String> tasks = new ArrayList<>();
 
@@ -45,26 +43,18 @@ public class TasksList extends JFrame{
             }
         });
 
-        JPanel pnAddTask = new JPanel(
-            new FlowLayout(FlowLayout.CENTER, 5, 5)
-        );
+        JPanel pnAddTask = new JPanel(new FlowLayout(FlowLayout.CENTER, 5, 5));
         pnAddTask.add(lbAddTasks);
         pnAddTask.add(tfAddTask);
       
-        JPanel pnButton = new JPanel(
-            new FlowLayout(FlowLayout.CENTER, 5, 5)
-        );
+        JPanel pnButton = new JPanel(new FlowLayout(FlowLayout.CENTER, 5, 5));
         pnButton.add(btSalvar);
 
-
         JPanel mainPanel = new JPanel();
-        mainPanel.setLayout(
-            new BoxLayout(mainPanel, BoxLayout.X_AXIS)
-        );
+        mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.X_AXIS));
         mainPanel.add(pnAddTask);
         mainPanel.add(pnButton);
        
-
         this.add(mainPanel);
         this.pack();
     }
