@@ -1,0 +1,28 @@
+1. Ponto FINAL - Ponto INICIAL = Vetor
+2. Ponto INICIAL + Ponto FINAL = Vetor
+
+quero ir do ponto A (100, 50) ao B (300, 150)
+
+O Vetor disso é 300(PF) - 100(PI) = 200 
+                150(PF) - 50(PI) = 100
+                                        = (200, 100)
+
+Faço p Modulo do Vetor
+3. |V| = RAIZ DE(X^2 + Y^2)
+
+4. Vetor Unitario = Vetor \ Modulo do vetor
+    200(X) \ 224(MV), 100(Y) \ 224(MV) = (RX, RY)
+
+Em seguida vc multiplica cada pela quantidade de pixel que deseja Andar
+( RX * Qnt de Pixel, RY * Qnt de Pixel)
+
+
+
+
+5. (X, Y) (Y, -X)
+
+6. Andar Angulo especifico =   (cos(ang) de X, seno(ang) de Y) 
+
+Vetor Unitario que vai exatamente 45° (1,1)
+
+        
