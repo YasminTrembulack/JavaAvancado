@@ -17,11 +17,9 @@ Em seguida vc multiplica cada pela quantidade de pixel que deseja Andar
 ( RX * Qnt de Pixel, RY * Qnt de Pixel)
 
 
-
-
 5. (X, Y) (Y, -X)
 
-6. Andar Angulo especifico =   (cos(ang) de X, seno(ang) de Y) 
+6. Andar Angulo especifico =   (cos(ang) de X, sin(ang) de Y) 
 
 Vetor Unitario que vai exatamente 45° (1,1)
 
