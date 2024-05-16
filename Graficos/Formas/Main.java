@@ -1,9 +1,16 @@
 import javax.swing.JFrame;
 import Files.Star;
 import Files.Forma;
+// import javax.swing.Timer;
 
 public class Main {
     public static void main(String[] args) {
+        // Timer timer;
+        // timer = new Timer(25, e -> {
+        //     System.out.println("ola");
+        // });
+        // timer.start();
+
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
