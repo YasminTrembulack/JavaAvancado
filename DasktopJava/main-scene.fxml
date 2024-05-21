@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainSceneController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="27.0" prefWidth="614.0" />
+      <Label alignment="CENTER" layoutX="14.0" layoutY="27.0" prefHeight="40.0" prefWidth="95.0" text="Notas">
+         <font>
+            <Font name="Bosch Sans Bold" size="30.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.75" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#682eff" />
+                  <Stop color="#682eff" offset="0.007662835249042145" />
+                  <Stop color="#ff52a4" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Separator layoutY="66.0" prefHeight="3.0" prefWidth="614.0" />
+      <TableView id="tbNotas" fx:id="tbNotas" layoutX="32.0" layoutY="84.0" prefHeight="286.0" prefWidth="554.0">
+        <columns>
+          <TableColumn id="tcID" fx:id="tcID" prefWidth="72.0" text="ID" />
+          <TableColumn id="tcNota" fx:id="tcNota" prefWidth="481.0" text="Nota" />
+            <TableColumn id="tcSelect" fx:id="tcSelect" prefWidth="72.0" />
+        </columns>
+      </TableView>
+      <Button layoutX="497.0" layoutY="34.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="103.0" text="Adicionar" />
+   </children>
+</Pane>
