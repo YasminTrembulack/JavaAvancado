@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="270.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="20.0" layoutY="140.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="1" />
+      <Button layoutX="80.0" layoutY="140.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="2" />
+      <Button layoutX="140.0" layoutY="140.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="3" />
+      <Button layoutX="20.0" layoutY="200.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="4" />
+      <Button layoutX="80.0" layoutY="200.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="5" />
+      <Button layoutX="140.0" layoutY="200.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="6" />
+      <Button layoutX="200.0" layoutY="200.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="x" />
+      <Button layoutX="200.0" layoutY="140.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="÷" />
+      <Button layoutX="20.0" layoutY="260.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="7" />
+      <Button layoutX="80.0" layoutY="260.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="8" />
+      <Button layoutX="140.0" layoutY="260.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="9" />
+      <Button layoutX="20.0" layoutY="320.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="0" />
+      <Button layoutX="80.0" layoutY="320.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="." />
+      <Button layoutX="140.0" layoutY="320.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="=" />
+      <Button layoutX="200.0" layoutY="320.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="+" />
+      <Button layoutX="200.0" layoutY="260.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="-" />
+      <Button layoutX="20.0" layoutY="80.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="." />
+      <TextField layoutX="20.0" layoutY="26.0" prefHeight="35.0" prefWidth="227.0" />
+   </children>
+</Pane>
