@@ -1,0 +1,72 @@
+package com.yasminm.scenes;
+
+import java.net.URL;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.stage.Stage;
+
+public class MainSceneController {
+    
+    public static Scene CreateScene() throws Exception {
+        URL sceneUrl = MainSceneController.class.getResource("main-scene.fxml");
+        Parent root = FXMLLoader.load(sceneUrl);
+        Scene scene = new Scene(root);
+        return scene;
+    }
+ 
+    @FXML
+    protected Button btCidade;
+
+    @FXML
+    protected Button btEstado;
+
+
+    public void goToCadastroEstado() {
+        try {
+            Stage crrStage = (Stage) btEstado
+                .getScene().getWindow();
+            crrStage.close();
+
+            Stage stage = new Stage();
+            Scene scene = CadastroEstadoSceneController.CreateScene();
+            stage.setScene(scene);
+            stage.show();
+        } 
+        catch (Exception ex) {
+            Alert alert = new Alert(
+                    AlertType.ERROR,
+                    "Erro ao processar a tela Cadastro ESTADO. Consulte o apoio de TI",
+                    ButtonType.OK);
+            alert.showAndWait();
+            ex.printStackTrace();
+        }
+    }
+
+    public void goToCadastroCidade() {
+        try {
+            Stage crrStage = (Stage) btCidade
+                .getScene().getWindow();
+            crrStage.close();
+
+            Stage stage = new Stage();
+            Scene scene = CadastroCidadeSceneController.CreateScene();
+            stage.setScene(scene);
+            stage.show();
+        } 
+        catch (Exception ex) {
+            Alert alert = new Alert(
+                    AlertType.ERROR,
+                    "Erro ao processar a tela Cadastro CIDADE. Consulte o apoio de TI",
+                    ButtonType.OK);
+            alert.showAndWait();
+            ex.printStackTrace();
+        }
+    }
+
+}
