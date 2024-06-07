@@ -3,57 +3,46 @@ package com.yasminm.test;
 import java.util.InputMismatchException;
 
 public class CPFValidator {
-    public Boolean validate(String CPF) {
-        if (CPF.equals("00000000000") || CPF.equals("11111111111") ||
-            CPF.equals("22222222222") || CPF.equals("33333333333") ||
-            CPF.equals("44444444444") || CPF.equals("55555555555") ||
-            CPF.equals("66666666666") || CPF.equals("77777777777") ||
-            CPF.equals("88888888888") || CPF.equals("99999999999") ||
-            (CPF.length() != 11))
-            return (false);
-
-        char dig10, dig11;
-        int sm, i, r, num, peso;
-
-        try {
-            sm = 0;
-            peso = 10;
-            for (i = 0; i < 9; i++) {
-                // converte o i-esimo caractere do CPF em um numero:
-                // por exemplo, transforma o caractere "0" no inteiro 0
-                // (48 eh a posicao de "0" na tabela ASCII)
-                num = (int) (CPF.charAt(i) - 48);
-                sm = sm + (num * peso);
-                peso = peso - 1;
-            }
-
-            r = 11 - (sm % 11);
-            if ((r == 10) || (r == 11))
-                dig10 = '0';
-            else
-                dig10 = (char) (r + 48); // converte no respectivo caractere numerico
-
-            // Calculo do 2o. Digito Verificador
-            sm = 0;
-            peso = 11;
-            for (i = 0; i < 10; i++) {
-                num = (int) (CPF.charAt(i) - 48);
-                sm = sm + (num * peso);
-                peso = peso - 1;
-            }
-
-            r = 11 - (sm % 11);
-            if ((r == 10) || (r == 11))
-                dig11 = '0';
-            else
-                dig11 = (char) (r + 48);
-
-            if ((dig10 == CPF.charAt(9)) && (dig11 == CPF.charAt(10)))
-                return (true);
-            else
-                return (false);
-        } catch (InputMismatchException erro) {
-            return (false);
+    public Boolean validate(String cpf) {
+        if(cpf.length() != 11){
+            return false;
         }
+        
+        int igual = 0;
+        for(int i = 0; i < 10; i++){
+            if (cpf.charAt(i) == cpf.charAt(i+1)){
+                igual++;
+            }
+        }
+        if(igual == 10){
+            return false;
+        }
+        
+        for(int i = 0; i < 11; i++){
+            if(!Character.isDigit(cpf.charAt(i))){
+                return false;
+            }
+        }
+        
+        int num = 10, soma = 0, x = 0, y = 0;
+        for(int i = 0; i < 9; i++){
+            soma += Character.getNumericValue(cpf.charAt(i)) * num;
+            num--;
+        }
+        x = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+        
+        soma = 0;
+        num = 11;
+        for(int i = 0; i < 10; i++){
+            soma += Character.getNumericValue(cpf.charAt(i)) * num;
+            num--;
+        }
+        y = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+        
+        if(Character.getNumericValue(cpf.charAt(9)) == x && Character.getNumericValue(cpf.charAt(10)) == y){
+            return true;
+        }
+        
+        return false;
     }
 }
