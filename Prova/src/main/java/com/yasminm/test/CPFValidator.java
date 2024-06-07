@@ -1,7 +1,5 @@
 package com.yasminm.test;
 
-import java.util.InputMismatchException;
-
 public class CPFValidator {
     public Boolean validate(String cpf) {
         if(cpf.length() != 11){
