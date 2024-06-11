@@ -18,3 +18,6 @@ public class CPFValidatorController {
         return validator.validate(cpf);
     } 
 }
+
+
+
