@@ -1,0 +1,21 @@
+criptografia Simetrica
+uma unica chave que pega e tranforma o texto ida e volta
+pegar dados de entrada e tranformar em dados de saida
+Ex:
+- cifra de cesar:       oi --desloca 2--> qk
+                        a chave é 'desloca 2'
+
+com a chave eu consigo voltar para o original
+o problema é aonde deve armazenar a chave, pois se alguem descobrir consegue descriptografar
+
+
+criptografia Asimetrica
+uma chave para criptografar e uma chave para descriptografar
+
+
+Hash
+não é reversivel 
+
+
+Salting
+
