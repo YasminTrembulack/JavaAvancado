@@ -16,6 +16,17 @@ uma chave para criptografar e uma chave para descriptografar
 Hash
 não é reversivel 
 
-
 Salting
+
+Slow Hash
+
+
+
+
+Token
+quando a pessoa faz login gera caracter aleatorios 
+vai no banco de dados
+
+jwt
+nao vai no banco de dados
 
